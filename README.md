@@ -2,7 +2,9 @@
 
 ## Commands:
 
- `ansible-playbook -i ansible-hosts ansible-vms.yaml`
- or
-  `ansible-playbook -i ansible-hosts ansible-vms-docker.yaml`
+```sh
+ansible-playbook -i ansible-hosts ansible-vms.yaml
+
+ansible-playbook -i ansible-hosts ansible-vms-docker.yaml
+```
 
