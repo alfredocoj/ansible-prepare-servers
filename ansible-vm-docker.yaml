@@ -22,6 +22,7 @@
         - curl
         - tmux
         - mcedit
+        - nano
     
     - name: Check if Docker is installed
       command: systemctl status docker
@@ -75,7 +76,7 @@
       group:
         name: server
         state: present
-    
+
     - name: Add the user 'server' with a bash shell, appending the group 'root' and 'docker' to the user's groups
       user:
         name: server
@@ -83,7 +84,7 @@
         groups: docker,server
         password: $6$SqHy25pDpABjfJN$tQwwrg3PwwpiE62OQnKk5ibw4o5rIE4FY.HACd8FlHoSawHYeHJ6RbySYSbIK3B52sHGG8tM2HehNWPzcQdqT0
         append: yes
-        
+
     - name: Allow server group to have passwordless sudo
       lineinfile:
         dest: /etc/sudoers

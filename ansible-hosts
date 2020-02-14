@@ -2,5 +2,9 @@
 192.168.6.171
 192.168.6.185
 
+[vms]
+192.168.254.6
+192.168.254.7
+
 [ftp:vars]
 ansible_python_interpreter=/usr/bin/python3
