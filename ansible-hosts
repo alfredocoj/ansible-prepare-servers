@@ -6,5 +6,8 @@
 192.168.254.6
 192.168.254.7
 
+[vm-flink]
+192.168.254.97
+
 [ftp:vars]
 ansible_python_interpreter=/usr/bin/python3
