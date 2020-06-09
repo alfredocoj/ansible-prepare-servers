@@ -9,5 +9,9 @@
 [vm-flink]
 192.168.254.97
 
+[vm-crawler]
+192.168.254.33
+192.168.253.33
+
 [ftp:vars]
 ansible_python_interpreter=/usr/bin/python3

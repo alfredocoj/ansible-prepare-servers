@@ -23,6 +23,7 @@
         - tmux
         - mcedit
         - nano
+        - rsync
     
     - name: Check if Docker is installed
       command: systemctl status docker
@@ -112,4 +113,17 @@
         - public_keys/alfredo.pub
         - public_keys/denner.pub
         - public_keys/fabiano.pub
-        - public_keys/flavio.pub
+        #- public_keys/flavio.pub
+
+    - name: Copy file with owner and permissions to file daemon.json
+      copy:
+        src: configs/daemon.json
+        dest: /etc/docker/daemon.json
+        owner: root
+        group: root
+        mode: '0644'
+
+    - name: Restart service docker, in all cases
+      service:
+        name: docker
+        state: restarted

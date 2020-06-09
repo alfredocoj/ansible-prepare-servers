@@ -1,0 +1,9 @@
+{
+  "exec-opts": ["native.cgroupdriver=systemd"],
+  "log-driver": "json-file",
+  "log-opts": {
+    "max-size": "100m"
+  },
+  "storage-driver": "zfs",
+  "insecure-registries" : ["192.168.6.184:5000", "10.121.2.211:5001", "10.54.0.184:5000", "10.54.0.214:5001", "rdocker.mateus:5001"]
+}
