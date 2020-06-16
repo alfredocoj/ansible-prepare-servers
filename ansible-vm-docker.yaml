@@ -10,12 +10,18 @@
 #      package:
 #        name: "*"
 #        state: latest
+  
+    - name: Remove python2
+      apt:
+        pkg: python2
+        state: absent
       
     - name: install development packages
       package: name={{ item }}
         state=present
       with_items:
         - python3
+        - python3-pip
         - git
         - atop
         - htop
@@ -24,6 +30,8 @@
         - mcedit
         - nano
         - rsync
+        - mtr
+        - nmap
     
     - name: Check if Docker is installed
       command: systemctl status docker
@@ -102,7 +110,7 @@
         - public_keys/alfredo.pub
         - public_keys/denner.pub
         - public_keys/fabiano.pub
-        - public_keys/flavio.pub
+        #- public_keys/flavio.pub
 
     - name: Set up multiple authorized keys
       authorized_key:

@@ -13,5 +13,9 @@
 192.168.254.33
 192.168.253.33
 
+[hom-docker]
+10.0.1.101
+10.0.1.138
+
 [ftp:vars]
 ansible_python_interpreter=/usr/bin/python3
